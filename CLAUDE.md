@@ -106,6 +106,14 @@ skypermit/
 
 Source code under `app/`, `lib/`, `components/`, `supabase/` and `public/openapi.yaml` may be read to clarify behaviour, but the **requirements in `docs/` are the primary test basis**. Where implementation and docs disagree, report it as a potential defect — do not treat the code as the oracle.
 
+## Skills
+
+| Skill | Use for | Output |
+|---|---|---|
+| `test-plan` (`.claude/skills/test-plan/`) | One-page test plan (ISTQB / IEEE 29119-3, condensed) for the whole release or one test type (API, regression, UI, security, acceptance) | `test-plans/TP-<scope>.md` — shown in chat first, written after approval |
+
+Invoke with `/test-plan` or just ask for a test plan. Generated plans record the `skypermit/docs` commit they were based on, so they can be re-checked when the test basis changes.
+
 ## Constraints
 
 - **The SkyPermit project is READ-ONLY.** Never create, modify, move, or delete any file under `workspace\skypermit` — no edits, no generated files, no git operations, no `npm install`/build/test runs that write to that folder.
